@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: #525252;
+}
+
+button:focus {
+    outline: none;
+}
+
+.container {
+    max-width: 800px;
+    margin: 5rem auto 0;
+    display: flex;
+}
+
+.card {
+    border: 1px solid #d4d4d4;
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.10);
+    padding: 20px 20px 15px;
+    width: 50%;
+    margin: 0 8px;
+    position: relative;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+.profile-info {
+    grid-column: 1 / 5;
+}
+.profile-info h1 {
+    color: #262626;
+    font-size: 1.4rem;
+}
+.profile-info p{
+   color: #999;
+}
+
+.profile-image {
+    grid-column: 5 / -1;
+    justify-self: end;
+}
+
+.message {
+    margin: 10px 0;
+}
+
+.message span {
+    font-weight: bold;
+}
+
+.card-footer::before {
+    content: '';
+    border-top: 1px solid #ececec;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.card-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 15px;
+}
+.card-footer button {
+    border: 1px solid;
+    background-color: #fff;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.card-footer button:first-child {
+    border-color: #64C134;
+    color: #64C134;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: none;
+}
+.card-footer button:first-child:hover {
+    background-color: #64C134;
+    color: #fff;
+}
+
+.card-footer button:last-child {
+    border-color: #E93F33;
+    color: #E93F33;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.card-footer button:last-child:hover {
+    background-color: #E93F33;
+    color: #fff;
+}
