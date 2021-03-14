@@ -1,0 +1,52 @@
+$black: #000;
+$dark-grey: #090b08;
+$white: #fff;
+$grey: #ecffe9;
+$mint-green: #c0eea9;
+$green: #97d279;
+
+$default-padding: 20px;
+
+@mixin title() {
+    .title {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding-bottom: 1em;
+    
+        &__left {
+            justify-content: flex-end;
+        }
+    
+        .line {
+            width: 3em;
+            height: 1px;
+            background-color: #000;
+            margin-right: 1em;
+    
+            &-right {
+                order: 2;
+                margin-right: 0;
+                margin-left: 1em;
+            }
+        }
+    }
+}
+
+@mixin textWrapper() {
+    max-width: 700px;
+    text-align: center;
+    padding: $default-padding;
+
+    p {
+        text-align: justify;
+        padding: $default-padding;
+        line-height: 1.4em;
+    }
+}
+
+@mixin sectionFlex() {
+    display: flex;
+    flex-wrap: wrap;
+}

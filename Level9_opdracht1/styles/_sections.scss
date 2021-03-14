@@ -1,0 +1,60 @@
+section {
+  padding: $default-padding;
+	@include title();
+
+	.wrapper {
+		@include sectionFlex();
+	
+		.text-featured,
+		.text-about {
+			@include textWrapper();
+		}
+	}
+}
+
+.featured {
+	.image img {
+		width: 300px;
+	}
+}
+
+.about {
+  background-color: $green;
+
+  .wrapper {
+    flex-wrap: nowrap;
+
+		.text-about p {
+			padding-bottom: 1em;
+		}
+
+		.video-wrapper {
+			position: relative;
+			padding-bottom: 33.25%;
+			overflow: hidden;
+			align-self: center;
+			flex: 2 0 55%;
+			margin: 1.4em 0;
+
+			iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		
+  }
+}
+
+.contact {
+	.form-wrapper,
+	&-wrapper {
+		padding: $default-padding;
+	}
+
+	.copy-wrapper {
+  	padding-left: $default-padding;
+	}
+}

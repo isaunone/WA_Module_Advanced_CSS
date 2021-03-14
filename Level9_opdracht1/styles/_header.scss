@@ -1,0 +1,39 @@
+.header {
+    @include sectionFlex();
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    padding: $default-padding;
+    background-color: $mint-green;
+    height: 120px;
+    -webkit-box-shadow: 0px 10px 7px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 7px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 7px -9px rgba(0, 0, 0, 0.75);
+
+    &__brand-logo img {
+      width: auto;
+      padding-top: 20px;
+      height: 7.5em;
+    }
+}
+
+.hero {
+    @include sectionFlex();
+    flex-wrap: nowrap;
+    padding: $default-padding;
+    height: 100vh;
+    align-items: center;
+    background: $green;
+
+    &__img img {
+      display: block;
+      height: auto;
+      width: 15.5em;
+    }
+
+    &-text {
+        @include textWrapper();
+    }
+}
